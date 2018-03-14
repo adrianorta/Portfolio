@@ -1,0 +1,49 @@
+div(class="container" id="contact")    
+  h1(class="mt-3") Contact Me
+  div(class="row")
+    div(class="col-md-6 mt-3")
+      form(method="post" action="mailto:adrianorta510@gmail.com?subject=Not%20Working&body=This%20will%20be%20replaced%20with%20MailGun")
+        div(class="md-form")
+          i(class="fa fa-user prefix grey-text")
+          label(for="name") Full Name:
+          input(type="text" class="form-control" id="name")
+        div(class="md-form")
+          i(class="fa fa-envelope prefix grey-text")
+          label(for="email") E-Mail:
+          input(type="email" id="email" class="form-control")
+        div(class="md-form")
+          i(class="fa fa-pencil prefix grey-text")
+          label(for="message") Message:
+          textarea(type="text" id="message" class="form-control md-textarea")
+        button(type="submit" class="btn btn-outline-info") Send
+        
+    div(class="col-md-6 text-center mt-3")
+      <!--Card-->
+      div(class="card")
+          <!--Card image-->
+          div(class="view overlay")
+              img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-9.jpg" class="img-fluid" alt="")
+              a(href="#")
+                  div(class="mask rgba-white-slight")    
+          div(class="card-body")
+            h4(class="card-title") 
+              strong Adrian Orta
+            h5(class="light-blue-text") 
+              strong Web Developer
+            p(class="card-text")
+              i(class="fa fa-phone prefix mr-2")  
+              span(class="black-text") 305-767-6647
+              br
+              i(class="fa fa-envelope prefix mr-2") 
+              span(class="black-text") adrianorta510@gmail.com
+              br
+              button(type="submit" class="btn btn-success") 
+                i(class="fa fa-file prefix mr-2") 
+                span Download Resume
+            br
+            a(class="icons-sm li-ic") 
+              i(class="fa fa-linkedin")
+            a(class="icons-sm gh-ic") 
+              i(class="fa fa-github")
+            a(class="icons-sm fb-ic") 
+              i(class="fa fa-facebook") 
