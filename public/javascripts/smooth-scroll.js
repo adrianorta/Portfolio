@@ -1,51 +1,39 @@
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#carousel-example-1z"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-      &&
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 10) {
+        $('.container h1').each(function(i) {
+            if ($(this).position().top <= windscroll - 100) {
+                $('#menubar li.active').removeClass('active');
+                $('#menubar li').eq(i).addClass('active');
+            }
         });
-      }
-    }
-  });
-
-//Scroll to top
-// When the user scrolls down 20px from the top of the document, show the button
-window.onload = function() {scrollFunction()};
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("toTop").style.opacity=1;
 
     } else {
-      document.getElementById("toTop").style.opacity=0;
+
+        $('#menubar').removeClass('fixed');
+        $('#menubar li.active').removeClass('active');
+        $('#menubar li:first').addClass('active');
     }
-}
+
+}).scroll()
+
+$('#menubar.left a[data-toggle="tooltip"]').tooltip({ placement: 'right' });
+
+$('.link').click(function(e){
+e.preventDefault();
+var link = $(this).attr('href');
+var posi = $(link).offset().top;
+  $('body,html').animate({scrollTop:posi},1200, 'easeInOutExpo');
+});
+
+$('html,body').scrollspy({ target: '#menubar', offset: 0  });
+
+$.scrollify({
+  section : ".container",
+  sectionName : false,
+  easing: "easeInOutExpo",
+  scrollSpeed: 1200,
+  offset :0,
+  setHeights: false,
+  after:function() {$.scrollify.update()}
+});

@@ -2,14 +2,24 @@ doctype html
 html
   head
     title= title
+    <meta charset="UTF-8">
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    <meta name="application-name" content="Adrian's Portfolio"/>
+    <meta name="description" content="Want to know what makes a good website? Visit my page. Adrian Orta here, Web Developer for hire." />
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#0E2B5E"/>
+    <meta property="og:title" content="Adrian's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="localhost:3000" />
+    <meta property="og:image" content="/images/code.jpeg" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-      
   body
-    include includes/header
-    include includes/to-top-button
+    include includes/menubar
     include hero
     include portfolio
     include about
@@ -20,4 +30,5 @@ html
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js")
     script(src="/javascripts/smooth-scroll.js")

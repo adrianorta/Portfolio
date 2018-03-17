@@ -1,71 +1,226 @@
 html, body {
   height: 100%;
+  background-color: #ECEFF1;
 }
 
+footer p {
+    color: #fff;
+}
+
+footer {
+  background-color: #333;
+}
+
+/***  MENUBAR  ***/
+.right {
+	position: fixed;
+	z-index: 9999;
+	text-align: center;
+  -moz-transform: translateY(-50%) translateZ(100px);
+	-o-transform: translateY(-50%) translateZ(100px);
+	-webkit-transform: translateY(-50%) translateZ(100px);
+	-ms-transform: translateY(-50%) translateZ(100px);
+	transform: translateY(-50%) translateZ(100px);
+}
+
+.right{
+  top: 50%;
+	right: 30px;
+}
+
+.nav {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 0;
+}
+ul.menu {
+	list-style: none;
+	padding: 0;
+}
+.nav>li>a, ul.menu a {
+	padding: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	color: #ddd;
+	margin:-3px;
+	border-radius: 50%;
+	border: none;
+	font-size: 10px;
+  background: rgb(255,255,255);
+	background: rgba(255,255,255,0.2);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	transition: all 0.5s ease-in-out;
+}
+
+ul.menu .active a, ul.menu a:hover {
+	background-color: #fff;
+	color: #222;
+	font-size: 14px;
+  -o-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.nav {
+  display: block;
+}
+
+/***  PAGES  ***/
 .container {
   min-height: 100%;
   overflow: hidden;
-  padding: 65px 0 0 0;
+  padding: 50px 0 ;
 }
 
-.parallax {
-    /* The image used */
-    background: url("http://www.hddesktopbackgrounds.us/backgrounds-images/1920x1080/79p59-hd-46345326-1920x1080.jpg");
+.heading {
+  color: #FFF;
+  border: solid white 7px;
+  padding: 5px;
+  max-width: 300px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
 
-    /* Full height */
+.parallax-hero {
+    background: url("/images/grass.jpeg");
     height: 100%;
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.parallax-2 {
-    /* The image used */
-    background: url("http://cdn23.us1.fansshare.com/photos/backgroundhd/wallpaper-hd-1285137990.jpg");
+.arrow {
+  margin-top: -80px;
+  font-size: 40px;
+}
 
-    /* Full height */
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
+.parallax-portfolio {
+    background: url("/images/water.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.btn-round {
-  width: 50px;
-  height: 50px;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 250%;
-  border-radius: 25px;
-  opacity: 0;
-  transition: opacity 0.3s;
+.parallax-about {
+    background: url("/images/light.gif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
+.parallax-contact {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url("/images/contact.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
+@media (min-width: 768px) {
+  .parallax {
+    height: 100%;
+  }
+  .right-card {
+    padding-left: 0;
+  }
+  .left-card {
+    padding-right: 0;
+  }
+  .primary-card {
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    z-index: 999;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .reflect {
+    -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(70%, transparent), to(rgba(255, 255, 255, 0.3)));
+  }
+
 }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+/***  PORTFOLIO  ***/
+.btn-portfolio {
+  color: #E84E40 !important;
+  font-size: inherit;
+  box-shadow: none;
+  padding: 5px 10px;
+  margin-left: -10px;
 }
 
-.nav-link {
-  padding: 0;
+.btn-portfolio:hover, .btn-portfolio:focus, .btn-portfolio:active{
+  box-shadow: none;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
-.navbar-brand {
-  padding-top: 2px;
-  padding-bottom: 2px;
+/***  ABOUT  ***/
+.about-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 30px 20px;
+  border-top: solid rgb(255, 255, 255) 60px;
+  border-top: solid rgba(255, 255, 255, 0.5) 60px;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgb(50,50,50), 0 2px 10px 0 rgb(50,50,50);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  color: #FFF;
+}
+
+.carousel {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  border: solid white 5px;
+}
+
+.carousel-inner {
+  border-radius: .25rem;
+}
+
+/***  CONTACT  ***/
+.form-control {
+  color: white;
+  border-bottom: 1px solid white !important;
+}
+
+/***  COLORS  ***/
+.success-text {
+  color: #00C851;
+}
+
+.icons-sm {
+  color: #263238;
+}
+
+.dark-grey-bkgrnd {
+  background-color: #222;
+}
+
+.material-red-bkgrnd {
+  background-color: #E84E40;
+}
+
+.material-red {
+  color: #E84E40;
+}
+
+.md-form input:focus, .md-form .md-textarea:focus {
+  box-shadow: none !important;
 }

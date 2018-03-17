@@ -1,46 +1,43 @@
-div(class="container" id="portfolio")  
-  h1(class="text-center mt-3 align-self-start") Projects
-  div(class="row align-middle")
-    div(class="col-md-4 mt-3 mb-3")
-      div(class="card")
-          <!--Card image-->
-          div(class="view overlay")
-              img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-4.jpg" class="img-fluid" alt="")
-              a(href="#")
-                  div(class="mask rgba-white-slight")    
-          div(class="card-body")
-            h4(class="card-title") 
-              strong Project 1
-            h5(class="light-blue-text") 
-              strong Javascript
-            p(class="card-text") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            button(type="submit" class="btn btn-success") View on GitHub
-    div(class="col-md-4 mt-3 mb-3")
-      div(class="card")
-          <!--Card image-->
-          div(class="view overlay")
-              img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-preview-1.jpg" class="img-fluid" alt="")
-              a(href="#")
-                  div(class="mask rgba-white-slight")    
-          div(class="card-body")
-            h4(class="card-title") 
-              strong Project 2
-            h5(class="light-blue-text") 
-              strong Javascript
-            p(class="card-text") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            button(type="submit" class="btn btn-success") View on GitHub
-    div(class="col-md-4 mt-3 mb-3")
-      div(class="card")
-          <!--Card image-->
-          div(class="view overlay")
-              img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-11.jpg" class="img-fluid" alt="")
-              a(href="#")
-                  div(class="mask rgba-white-slight")    
-          div(class="card-body")
-            h4(class="card-title") 
-              strong Project 3
-            h5(class="light-blue-text") 
-              strong Javascript
-            p(class="card-text") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            button(type="submit" class="btn btn-success") View on GitHub
-div(class="parallax w-100 h-25")
+div(class="parallax parallax-portfolio" id="portfolio")
+  div(class="container")  
+    h1(class="text-center mb-5 heading") Portfolio
+    div(class="row mt-5 reflect")
+      div(class="col-md-4  left-card")
+        div(class="card")
+            <!--Card image-->
+            div(class="view overlay")
+                img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-4.jpg" class="img-fluid" alt="")   
+            div(class="card-body")
+              h4(class="card-title") 
+                strong Twitter Interface
+              h5
+                strong Twitter API, JSON, Express
+              p(class="card-text") Using the Twitter API and some AJAX calls, you too can grab ahold of your feed by displaying your most recent followers, messages, and tweets all in one easy to read interface.
+              a(href="https://github.com/adrianorta/TwitterInterface" target="_blank" class="btn btn-portfolio") 
+                strong VIEW
+      div(class="col-md-4 portfolio-card primary-card")
+        div(class="card")
+            <!--Card image-->
+            div(class="view overlay")
+                img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-preview-1.jpg" class="img-fluid" alt="")    
+            div(class="card-body")
+              h4(class="card-title") 
+                strong Employee Directory
+              h5 
+                strong Random User API, Flexbox
+              p(class="card-text") Still using that old system that dates back to the 80s? Upgrade your view and spend less time looking at green text with a responsive layout that gives you more info at the click of a button. 
+              a(href="https://github.com/adrianorta/EmployeeDirectory" target="_blank" class="btn btn-portfolio") 
+                strong VIEW
+      div(class="col-md-4 right-card")
+        div(class="card")
+            <!--Card image-->
+            div(class="view overlay")
+                img(src="https://newevolutiondesigns.com/images/freebies/google-material-design-wallpaper-11.jpg" class="img-fluid" alt="")    
+            div(class="card-body")
+              h4(class="card-title") 
+                strong Site Crawler
+              h5 
+                strong Node.js, Express, npm
+              p(class="card-text") Ever wondered how job boards like indeed.com work? Go ahead and scrape your own site for relevant information right when you need it. It's fast, easy, and fun!
+              a(href="https://github.com/adrianorta/ContentScraper" target="_blank" class="btn btn-portfolio") 
+                strong VIEW
