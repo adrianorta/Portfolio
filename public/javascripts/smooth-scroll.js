@@ -23,22 +23,24 @@ var link = $(this).attr('href');
 var posi = $(link).offset().top;
   $('body,html').animate({scrollTop:posi},1200, 'easeInOutExpo');
 });
+if(!(/Android|webOS|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent) )) { //if not these devices(userAgents)
 
-$.scrollify({
-  section : ".parallax",
-  sectionName : false,
-  interstitialSection : "",
-  easing: "easeOutExpo",
-  scrollSpeed: 1100,
-  offset : 0,
-  scrollbars: true,
-  standardScrollElements: "",
-  setHeights: false,
-  overflowScroll: true,
-  updateHash: true,
-  touchScroll:true,
-  before:function() {},
-  after:function() {},
-  afterResize:function() {},
-  afterRender:function() {}
-});
+  $.scrollify({
+    section : ".parallax",
+    sectionName : false,
+    interstitialSection : "",
+    easing: "easeOutExpo",
+    scrollSpeed: 1100,
+    offset : 0,
+    scrollbars: true,
+    standardScrollElements: "",
+    setHeights: false,
+    overflowScroll: true,
+    updateHash: true,
+    touchScroll:true,
+    before:function() {},
+    after:function() {},
+    afterResize:function() {},
+    afterRender:function() {}
+  });
+}
