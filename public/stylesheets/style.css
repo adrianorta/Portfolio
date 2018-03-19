@@ -98,6 +98,7 @@ ul.menu .active a, ul.menu a:hover {
 }
 
 .parallax-hero {
+  height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/code.jpeg");
     background-attachment: fixed;
     background-position: center;
@@ -130,6 +131,9 @@ ul.menu .active a, ul.menu a:hover {
     z-index: 999;
     padding-right: 0;
     padding-left: 0;
+  }
+  .parallax-portfolio, .parallax-contact, .parallax-about {
+    height: 100%;
   }
 }
 
