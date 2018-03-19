@@ -117,9 +117,6 @@ ul.menu .active a, ul.menu a:hover {
 }
 
 @media (min-width: 768px) {
-  .parallax-portfolio, .parallax-contact, .parallax-about  {
-
-  }
   .right-card {
     padding-left: 0;
   }
@@ -184,12 +181,11 @@ ul.menu .active a, ul.menu a:hover {
   color: #FFF;
 }
 
-
 .progress-bar {
   text-align: left;
   padding-left: 10px;
- font-family: Arial;
- text-decoration: none;
+  font-family: Arial;
+  text-decoration: none;
 }
 
 /***  CONTACT  ***/
@@ -215,18 +211,6 @@ ul.menu .active a, ul.menu a:hover {
 
 .success-text {
   color: #00C851;
-}
-
-.icons-sm {
-  color: #263238;
-}
-
-.dark-grey-bkgrnd {
-  background-color: #222;
-}
-
-.material-red-bkgrnd {
-  background-color: #E84E40;
 }
 
 .material-red {
