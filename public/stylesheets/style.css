@@ -198,7 +198,10 @@ ul.menu .active a, ul.menu a:hover {
 .social-list {
   display: inline;
   list-style: none;
+}
 
+.page-footer{
+    height: auto !important;
 }
 
 /***  COLORS  ***/
@@ -206,7 +209,7 @@ ul.menu .active a, ul.menu a:hover {
   color: inherit !important;
 }
 .elegant-color-dark-text, .elegant-color-dark-text:active, .elegant-color-dark-text:focus {
-  color: #212121;
+  color: #212121 !important;
 }
 
 .success-text {
