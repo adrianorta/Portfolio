@@ -1,8 +1,29 @@
 div(class="parallax parallax-about" id="about")
-  div(class="container")  
+  div(class="container pl-3 pr-3")  
     h1(class="mb-5 text-center heading") About
     div(class="row")
-      div(class="col-md-6 mb-3")
+      div(class="col-md-6")
+        div(class="card mb-3")
+            <!--Card image-->
+            div(class="view overlay")
+                img(src="/images/eat_sleep_code.jpg" class="img-fluid" alt="")   
+            div(class="card-body text-center")
+              h4(class="card-title") 
+                strong SKILLS
+              div(class="progress mt-3 mb-3")
+                div(class="progress-bar" style="width: 90%; background-color: #ffbb33" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100") 
+                  strong HTML / Pug
+              div(class="progress mt-3 mb-3")
+                div(class="progress-bar" style="width: 70%; background-color: #00C851" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100") 
+                  strong CSS
+              div(class="progress mt-3 mb-3")
+                div(class="progress-bar" style="width: 70%; background-color: #33b5e5" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100") 
+                 strong Javascript / jQuery / Node
+              div(class="progress mt-3 mb-3")
+                div(class="progress-bar" style="width: 50%; background-color: #ff4444" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100") 
+                  strong Git / Chrome Dev Tools
+              
+      div(class="col-md-6")
         div(class="about-text") 
           p 
             strong I’m an aspiring Full-Stack Developer, and I think most of the reason I've gone this route is because I have a drive and an unsatiable thirst for knowledge which has lead me to have a passion for dealing with all parts of a web application.
@@ -10,16 +31,4 @@ div(class="parallax parallax-about" id="about")
             strong  I'll be finishing my Bachelor's soon. I'm also a TechDegree Student at TeamTreehouse where I'm taking the Full-Stack route. Like most programmers I learn as I code, reading documentation, learning from other's solutions and there's always a little bit of trial and error.
           p 
             strong When I'm not coding you can find me taking photos, playing guitar, or spending time with my family.       
-      div(class="col-md-6")
-        div(class="card")
-            <!--Card image-->
-            div(class="view overlay")
-                img(src="/images/code.jpeg" class="img-fluid" alt="")   
-            div(class="card-body text-center")
-              h4(class="card-title") 
-                strong SKILLS
-              ul(class="list-group")
-                li(class="list-group-item") HTML/Pug
-                li(class="list-group-item") CSS/Sass
-                li(class="list-group-item") Javascript/jQuery/Node
-                li(class="list-group-item") Git/Chrome Dev Tools/Heroku 
+      

@@ -1,23 +1,21 @@
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
-    if (windscroll >= 10) {
-        $('.container h1').each(function(i) {
+    if (windscroll >= 100) {
+        $('#menubar').addClass('fixed');
+        $('.parallax').each(function(i) {
             if ($(this).position().top <= windscroll - 100) {
                 $('#menubar li.active').removeClass('active');
-                $('#menubar li').eq(i).addClass('active');
+                $('#menubar li').eq(i+1).addClass('active');
             }
         });
 
     } else {
-
         $('#menubar').removeClass('fixed');
         $('#menubar li.active').removeClass('active');
         $('#menubar li:first').addClass('active');
     }
 
-}).scroll()
-
-$('#menubar.left a[data-toggle="tooltip"]').tooltip({ placement: 'right' });
+})
 
 $('.link').click(function(e){
 e.preventDefault();
@@ -26,14 +24,21 @@ var posi = $(link).offset().top;
   $('body,html').animate({scrollTop:posi},1200, 'easeInOutExpo');
 });
 
-$('html,body').scrollspy({ target: '#menubar', offset: 0  });
-
 $.scrollify({
-  section : ".container",
+  section : ".parallax",
   sectionName : false,
-  easing: "easeInOutExpo",
-  scrollSpeed: 1200,
-  offset :0,
-  setHeights: false,
-  after:function() {$.scrollify.update()}
+  interstitialSection : "",
+  easing: "easeOutExpo",
+  scrollSpeed: 1100,
+  offset : 0,
+  scrollbars: true,
+  standardScrollElements: "",
+  setHeights: true,
+  overflowScroll: true,
+  updateHash: true,
+  touchScroll:true,
+  before:function() {},
+  after:function() {},
+  afterResize:function() {},
+  afterRender:function() {}
 });

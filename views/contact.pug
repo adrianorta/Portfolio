@@ -1,26 +1,10 @@
 div(class="parallax parallax-contact" id="contact")
-  div(class="container")    
-    h1(class="mb-5 text-center heading") Contact
+  div(class="container pl-3 pr-3")    
+    h1(class="mb-5 text-center heading-dark") Contact
     div(class="row")
-      div(class="col-md-6")
-        form(class="mb-3" method="post" action="mailto:adrianorta510@gmail.com?subject=Not%20Working&body=This%20will%20be%20replaced%20with%20MailGun")
-          div(class="md-form")
-            i(class="fa fa-user prefix white-text")
-            label(class="white-text" for="name") Full Name:
-            input(type="text" class="form-control" id="name")
-          div(class="md-form")
-            i(class="fa fa-envelope prefix  white-text")
-            label(class="white-text" for="email") E-Mail:
-            input(type="email" id="email" class="form-control")
-          div(class="md-form")
-            i(class="fa fa-pencil prefix  white-text")
-            label(class="white-text" for="message") Message:
-            textarea(id="message" class="white-text form-control md-textarea")
-          button(type="submit" class="btn btn-info") Send
-          
       div(class="col-md-6 text-center")
         <!--Card-->
-        div(class="card")
+        div(class="card mb-3")
             <!--Card image-->
             div(class="view overlay")
                 img(src="/images/me.jpg" class="img-fluid" alt="")   
@@ -33,16 +17,20 @@ div(class="parallax parallax-contact" id="contact")
                 i(class="fa fa-phone prefix mr-2")  
                 span(class="black-text" itemprop="http://schema.org/telephone") 305-767-6647
                 br
-                i(class="fa fa-envelope prefix mr-2") 
-                span(class="black-text" itemprop="http://schema.org/email") adrianorta510@gmail.com
-                br
-                a(href="/misc/AdriansResume.pdf" target="_blank" class="mt-3 mb-0 btn btn-success") 
+                a(href="/misc/AdriansResume.pdf" target="_blank" class="mt-3 btn btn-success") 
                   i(class="fa fa-file prefix mr-2") 
                   span Download Resume
-              br
-              a(target="_blank" class="icons-sm li-ic" href="https://www.linkedin.com/in/adrian-orta-39285612a/") 
-                i(class="fa fa-linkedin element")
-              a(target="_blank" class="icons-sm gh-ic" href="https://github.com/adrianorta") 
-                i(class="fa fa-github element")
-              a(target="_blank" class="icons-sm tw-ic" href="https://twitter.com/adrianorta510") 
-                i(class="fa fa-twitter element") 
+
+      div(class="col-md-6")
+        form(class="mb-3" method="post" action="mailto:adrianorta510@gmail.com?subject=&body=This%20will%20be%20replaced%20with%20MailGun")
+          div(class="md-form")
+            
+            label(class="" for="subject") Subject:
+            input(type="text" class="form-control" id="subject")
+          div(class="md-form")            
+            label(class="" for="message") Message:
+            textarea(id="message" class="form-control md-textarea")
+          button(type="submit" class="btn btn-info w-100 ml-0") 
+            <i class="fa fa-send mr-1" aria-hidden="true"></i> Send
+          
+      
